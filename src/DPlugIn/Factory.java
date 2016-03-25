@@ -15,7 +15,7 @@ public class Factory extends Framework.Factory {
 
     @Override
     public Gui NewGui() {
-        return new Gui("DPlugIn");
+        return new Gui("DPlugIn", this);
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -15,8 +15,9 @@ import javax.swing.JFrame;
 abstract public class Gui extends JFrame {
     public Calc calc;
     /** Creates new form calcGui */
-    public Gui(String name) {
+    public Gui(String name, Factory f) {
         super(name);
+        calc = f.NewCalc();
         initComponents();
     }
     
@@ -27,7 +28,6 @@ abstract public class Gui extends JFrame {
      */
     @SuppressWarnings("unchecked")
     public void initComponents() {
-        calc = new Calc() {};
         Result = new javax.swing.JTextField();
         Enter = new javax.swing.JButton();
         Clear = new javax.swing.JButton();
@@ -39,7 +39,7 @@ abstract public class Gui extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Result.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Result.setText("0");
+        Result.setText(calc.get());
 
         Enter.setText("Enter");
         Enter.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +130,7 @@ abstract public class Gui extends JFrame {
 
     public void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
         calc.clear();
-        Result.setText("0");
+        Result.setText(calc.get());
     }//GEN-LAST:event_ClearActionPerformed
 
     public void PlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusActionPerformed

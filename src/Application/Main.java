@@ -13,5 +13,8 @@ public class Main {
         
         instance = new DPlugIn.Factory(); // new BIPlugIn.Factory
         instance.NewGui().display();
+        
+//        instance = new BIPlugIn.Factory();
+//        instance.NewGui().display();
     }
 }
