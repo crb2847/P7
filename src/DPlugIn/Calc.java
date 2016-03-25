@@ -12,11 +12,11 @@ package DPlugIn;
 public class Calc extends Framework.Calc {
     Double value = 0.0;
     
-    void set(String t){value = new Double(t);}
-    void clear(){ value = 0.0; }
-    String get(){ return value.toString(); }
-    void add(String t){value = value+Double.parseDouble(t);}
-    void sub(String t){value = value-Double.parseDouble(t);}
-    void mul(String t){value = value*Double.parseDouble(t);}
-    void div(String t){value = value/Double.parseDouble(t);}
+    public void set(String t){value = new Double(t);}
+    public void clear(){ value = 0.0; }
+    public String get(){ return value.toString(); }
+    public void add(String t){value = value+Double.parseDouble(t);}
+    public void sub(String t){value = value-Double.parseDouble(t);}
+    public void mul(String t){value = value*Double.parseDouble(t);}
+    public void div(String t){value = value/Double.parseDouble(t);}
 }

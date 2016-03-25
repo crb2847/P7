@@ -5,19 +5,19 @@
 
 package BIPlugIn;
 
-import Framework.Calc;
-import Framework.Gui;
 
 public class Factory extends Framework.Factory {
 
     @Override
     public Calc NewCalc() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new Calc();
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public Gui NewGui() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new Gui("BIPlugIn");
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
