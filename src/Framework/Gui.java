@@ -39,7 +39,7 @@ abstract public class Gui extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Result.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        Result.setText(calc.get());
+        Result.setText("0");
 
         Enter.setText("Enter");
         Enter.addActionListener(new java.awt.event.ActionListener() {
@@ -124,16 +124,17 @@ abstract public class Gui extends JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    public void EnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterActionPerformed
+    public void EnterActionPerformed(java.awt.event.ActionEvent evt) {
         calc.set(Result.getText());
-    }//GEN-LAST:event_EnterActionPerformed
+    }
 
     public void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
         calc.clear();
-        Result.setText(calc.get());
+        Result.setText("0");
     }//GEN-LAST:event_ClearActionPerformed
 
     public void PlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlusActionPerformed
+        System.out.println(calc.get());
         calc.add( Result.getText());
         Result.setText(calc.get());
     }//GEN-LAST:event_PlusActionPerformed
@@ -154,13 +155,13 @@ abstract public class Gui extends JFrame {
     }//GEN-LAST:event_DivActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    javax.swing.JButton Clear;
-    javax.swing.JButton Div;
-    javax.swing.JButton Enter;
-    javax.swing.JButton Minus;
-    javax.swing.JButton Plus;
-    javax.swing.JTextField Result;
-    javax.swing.JButton Times;
+    public javax.swing.JButton Clear;
+    public javax.swing.JButton Div;
+    public javax.swing.JButton Enter;
+    public javax.swing.JButton Minus;
+    public javax.swing.JButton Plus;
+    public javax.swing.JTextField Result;
+    public javax.swing.JButton Times;
     // End of variables declaration//GEN-END:variables
 
     
